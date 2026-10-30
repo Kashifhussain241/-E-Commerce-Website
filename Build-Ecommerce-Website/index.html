@@ -1,102 +1,575 @@
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tutorial</title>
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-
-        <link rel="stylesheet" href="style.css">
-    </head>
-
-    <body>
-
-
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-            integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-            crossorigin="anonymous"></script>
-    </body>
-
-</html>
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Studio | Portfolio</title>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Product Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+html {
+    scroll-behavior: smooth;
+}
 
-        <link rel="stylesheet" href="style.css">
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #171717;
+    overflow-x: hidden;
+}
 
-        <style>
-            /* internal styles */
-        </style>
+/* NAVBAR */
 
-    </head>
+.navbar {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
 
-    <body>
+.logo {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
 
+.logo span {
+    color: #8554f6;
+}
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-            integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-            crossorigin="anonymous"></script>
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
 
-        <script>
-            // script for image change on click
-        </script>
-    </body>
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-</html>
-<!DOCTYPE html>
-<html lang="en">
+.nav-links a:hover {
+    color: #8554f6;
+}
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shop</title>
+.contact-btn {
+    padding: 13px 23px;
+    background: #171717;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+.contact-btn:hover {
+    background: #8554f6;
+    transform: translateY(-3px);
+}
 
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+/* HERO SECTION */
 
-        <link rel="stylesheet" href="style.css">
+.hero {
+    min-height: 100vh;
+    padding: 150px 8% 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
 
-        <style>
-            /* internal styles */
-        </style>
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
 
-    </head>
+.tag {
+    display: inline-block;
+    padding: 10px 17px;
+    border: 1px solid #e8e1ff;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #8554f6;
+    margin-bottom: 30px;
+    animation: fadeUp 1s ease;
+}
 
-    <body>
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.98;
+    letter-spacing: -7px;
+    font-weight: 900;
+    animation: fadeUp 1s ease 0.2s both;
+}
 
+.gradient-text {
+    background: linear-gradient(
+        100deg,
+        #8654f6,
+        #d75cbb,
+        #4288ff
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-            integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-            crossorigin="anonymous"></script>
-    </body>
+.hero p {
+    margin-top: 30px;
+    max-width: 480px;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.9;
+    animation: fadeUp 1s ease 0.4s both;
+}
 
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+    animation: fadeUp 1s ease 0.6s both;
+}
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+    padding: 16px 25px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #8554f6;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #6b3bd5;
+    transform: translateY(-4px);
+}
+
+.secondary-btn {
+    color: #222;
+    border: 1px solid #ddd;
+}
+
+.secondary-btn:hover {
+    border-color: #8554f6;
+    color: #8554f6;
+}
+
+/* FLOATING SHAPES */
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(1px);
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-one {
+    width: 240px;
+    height: 240px;
+    background: linear-gradient(135deg, #d9c7ff, #a4baff);
+    right: 12%;
+    top: 23%;
+    opacity: 0.55;
+}
+
+.shape-two {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(135deg, #ffb6e6, #ffc5a0);
+    right: 29%;
+    bottom: 15%;
+    opacity: 0.7;
+    animation-delay: 1s;
+}
+
+.shape-three {
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #b8e7ff, #a28aff);
+    right: 8%;
+    bottom: 25%;
+    animation-delay: 2s;
+}
+
+/* PROJECT SECTION */
+
+.projects {
+    padding: 110px 8%;
+    background: #faf9ff;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 55px;
+}
+
+.section-label {
+    color: #8554f6;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.section-top h2 {
+    font-size: 48px;
+    letter-spacing: -3px;
+}
+
+.section-top p {
+    color: #888;
+    font-size: 13px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.project-image {
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s;
+}
+
+.project-card:hover img {
+    transform: scale(1.06);
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    color: #999;
+    font-size: 12px;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    padding: 110px 8%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: clamp(35px, 6vw, 65px);
+    letter-spacing: -4px;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.15;
+}
+
+.about p {
+    max-width: 550px;
+    margin: 25px auto;
+    color: #888;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 45px 8%;
+    background: #171717;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: #999;
+    font-size: 12px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 140px 6% 80px;
+    }
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+    .shape-one {
+        width: 150px;
+        height: 150px;
+        right: 5%;
+        top: 15%;
+    }
+
+    .projects {
+        padding: 80px 6%;
+    }
+
+    .section-top {
+        display: block;
+    }
+
+    .section-top h2 {
+        font-size: 38px;
+    }
+
+    .section-top p {
+        margin-top: 15px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 260px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+    <div class="logo">CREATIVE<span>.</span></div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <a href="#contact" class="contact-btn">Let's Talk ↗</a>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="tag">✦ CREATIVE DESIGNER & VISUAL ARTIST</div>
+
+        <h1>
+            Design that<br>
+            makes you<br>
+            <span class="gradient-text">stand out.</span>
+        </h1>
+
+        <p>
+            I create beautiful digital experiences, stunning visuals
+            and creative designs that turn ideas into something
+            extraordinary.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="primary-btn">
+                Explore My Work ↗
+            </a>
+
+            <a href="#about" class="secondary-btn">
+                About Me
+            </a>
+        </div>
+
+    </div>
+
+    <div class="shape shape-one"></div>
+    <div class="shape shape-two"></div>
+    <div class="shape shape-three"></div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+    <div class="section-top">
+        <div>
+            <div class="section-label">SELECTED WORK</div>
+            <h2>Creative Projects.</h2>
+        </div>
+
+        <p>A collection of ideas brought to life.</p>
+    </div>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=1000"
+                alt="Abstract colorful artwork">
+            </div>
+            <div class="project-info">
+                <h3>Abstract Visual Design</h3>
+                <p>Digital Art · Creative Direction</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=1000"
+                alt="Creative graphic design">
+            </div>
+            <div class="project-info">
+                <h3>Brand Identity</h3>
+                <p>Branding · Visual Identity</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1000"
+                alt="Retro creative artwork">
+            </div>
+            <div class="project-info">
+                <h3>Creative Campaign</h3>
+                <p>Social Media · Art Direction</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=1000"
+                alt="Abstract 3D artwork">
+            </div>
+            <div class="project-info">
+                <h3>3D Experiments</h3>
+                <p>3D Design · Digital Art</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="section-label">A LITTLE ABOUT ME</div>
+
+    <h2>
+        Creativity is not just what I do.
+        It's how I <span class="gradient-text">see the world.</span>
+    </h2>
+
+    <p>
+        I believe great design combines creativity, simplicity
+        and purpose. My goal is to create visuals that look
+        beautiful and leave a lasting impression.
+    </p>
+
+    <a href="#contact" class="primary-btn">
+        Let's Create Something ↗
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+    <div class="logo">CREATIVE<span>.</span></div>
+
+    <p>© 2026 Creative Studio. All rights reserved.</p>
+
+    <p>Designed with creativity ✦</p>
+
+</footer>
+
+</body>
 </html>
